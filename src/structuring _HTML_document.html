@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Моя перша веб-сторінка</title>
     <link rel="icon" type="image/png" href="resources/images/one.png">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
     <h1>Ласкаво просимо на мою сторінку</h1>
@@ -25,5 +39,44 @@
             </ul>
         </li>
     </ol>
+    <h2>Розклад конференції</h2>
+    <table>
+    <tr>
+        <th colspan="4">Конференція зі здорового способу життя (ЗОЖ)</th>
+    </tr>
+    <tr>
+        <th>Час</th>
+        <th>Тема</th>
+        <th>Спікер</th>
+        <th>Формат</th>
+    </tr>
+    <tr>
+        <td>09:00 – 10:00</td>
+        <td>Основи здорового харчування</td>
+        <td rowspan="2">Анна Іванова</td>
+        <td>Лекція</td>
+    </tr>
+    <tr>
+        <td>10:00 – 11:00</td>
+        <td>Вітаміни та баланс мікроелементів</td>
+        <td>Семінар</td>
+    </tr>
+    <tr>
+        <td>11:30 – 12:30</td>
+        <td colspan="2">Активний відпочинок та фізична активність</td>
+        <td>Практика</td>
+    </tr>
+    <tr>
+        <td>13:30 – 14:30</td>
+        <td>Психічне здоров’я</td>
+        <td rowspan="2">Сергій Петров</td>
+        <td>Лекція</td>
+    </tr>
+    <tr>
+        <td>14:30 – 15:30</td>
+        <td>Управління стресом</td>
+        <td>Тренінг</td>
+    </tr>
+</table>
 </body>
 </html>
