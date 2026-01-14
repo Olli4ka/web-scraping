@@ -5,18 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Моя перша веб-сторінка</title>
     <link rel="icon" type="image/png" href="resources/images/one.png">
+    <link rel="stylesheet" href="resources/styles/styles.css">
     <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 10px;
-            border: 1px solid black;
-            text-align: center;
-        }
-        th {
-            background-color: #f2f2f2;
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
         }
     </style>
 </head>
@@ -25,7 +21,7 @@
         <label for="search">Пошук:</label>
         <input type="search" id="search" name="search" placeholder="Введіть запит">
     </form>
-    <h1>Ласкаво просимо на мою сторінку</h1>
+    <h1 id="main-header">Ласкаво просимо на мою сторінку</h1>
     <p>Це приклад HTML-документа, створеного для вивчення основ HTML.</p>
     <br>
     <a href="https://example.com" target="_blank">Відвідайте example.com</a>
@@ -82,42 +78,62 @@
         <td>Тренінг</td>
     </tr>
 </table>
-<form action="https://jsonplaceholder.typicode.com/posts" method="post">
+<form action="https://jsonplaceholder.typicode.com/posts" method="post" class="registration-form">
     <h2>Реєстраційна форма</h2>
+    <div class="field">
     <label for="name">Ім'я:</label>
     <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required>
+    </div>
 
+    <div class="field">
     <label for="email">Електронна пошта:</label>
     <input type="email" id="email" name="email" placeholder="Введіть email" required>
+    </div>
 
+    <div class="field">
     <label for="password">Пароль:</label>
     <input type="password" id="password" name="password" required>
+    </div>
 
+    <div class="field">
     <label for="experience">Рівень досвіду:</label>
     <input type="range" id="experience" name="experience" min="0" max="10" step="1" required>
+    </div>
 
+    <div class="field">
     <label for="country">Виберіть країну:</label>
         <select id="country" name="country" required>
             <option value="ua">Україна</option>
             <option value="it">Італія</option>
             <option value="pt">Португалія</option>
         </select>
+    </div>
 
+    <div class="field">
     <label for="meeting">Дата і час зустрічі:</label>
     <input type="datetime-local" id="meeting" name="meeting">
+    </div>
 
+    <div class="options">
     <label>Стать:</label>
     <label><input type="radio" name="gender" value="male"> Чоловіча</label>
     <label><input type="radio" name="gender" value="female"> Жіноча</label>
+    </div>
 
+    <div class="options">
     <label for="file">Додайте файл:</label>
     <input type="file" id="file" name="file" accept=".jpg, .jpeg, .png, .pdf">
+    </div>
 
-    <label for="additionalInfo">Додаткова інформація:</label><br>
-    <textarea id="additionalInfo" name="additionalInfo" placeholder="Введіть додаткову інформацію"></textarea>
+    <div class="options">
+    <label for="additionalInfo">Додаткова інформація:</label>
+    <textarea id="additionalInfo" name="additionalInfo" placeholder="Введіть додаткову інформацію"></textarea><br>
+    </div>
 
+    <div class="options">
     <label for="subscribe">Підписатися на новини</label>
     <input type="checkbox" id="subscribe" name="subscribe">
+    </div>
 
     <button type="submit">Зареєструватися</button>
   </form>
